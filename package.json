@@ -1,0 +1,34 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Heath McGowan's Web Development Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heathmcgowan/portfolio.git"
+  },
+  "keywords": [
+    "Heath",
+    "McGowan",
+    "Web",
+    "Development",
+    "Design",
+    "Portfolio",
+    "UX",
+    "UI"
+  ],
+  "author": "Heath McGowan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heathmcgowan/portfolio/issues"
+  },
+  "homepage": "https://github.com/heathmcgowan/portfolio#readme",
+  "dependencies": {
+    "eslint": "^5.16.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  }
+}
