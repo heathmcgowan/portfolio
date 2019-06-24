@@ -13,34 +13,33 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <section class="hero">
-        <header>
-            <a class="header-title" href="/">
-                <h1>Heath McGowan</h1>
-                <h2>Web Developer</h2>
-            </a>
-            <nav>
-                <ul>
-                    <li><a class="active-nav-item" href="/">Home</a></li>
-                    <li><a class="non-active-nav-item" href="/about.html">About</a></li>
-                    <li><a class="non-active-nav-item" href="/contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <div class="hero-content">
+    <header>
+        <a class="header-title" href="/">
+            <h1>Heath McGowan</h1>
+            <h2>Web Developer</h2>
+        </a>
+        <nav>
+            <ul>
+                <li class="home-button active-nav-item">Home</li>
+                <li class="about-button non-active-nav-item">About</li>
+                <li class="contact-button non-active-nav-item">Contact</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="home">
             <p>I'm <strong>Heath McGowan</strong>.</p>
             <p>I live in <strong>Auckland, New Zealand</strong>.</p>
             <p>I have a passion for <strong>Web Design</strong> and <strong>Development</strong>.</p>
             <p>I run on <strong>Coffee</strong> and <strong>Music</strong>.</p>
-        </div>
-    </section>
-    <main id="main">
-
+        </section>
+        <section class="about hidden">
+            <p>This is the About Page</p>
+        </section>
+        <section class="contact hidden">
+            <p>This is the Contact Page</p>
+        </section>
     </main>
-    <footer>
-
-    </footer>
-    
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 </body>

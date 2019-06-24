@@ -49,6 +49,10 @@ body {
     font-family: $font-stack;
     font-weight: $font-regular;
     color: $primary-color;
+    @include gradient-animation;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 html {
@@ -56,16 +60,6 @@ html {
 }
 
 // Header
-.hero {
-    min-height: 100vh;
-    width: 100vw;
-    max-width: 100%;
-    @include gradient-animation;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
 header {
     margin: auto;
     width: 100%;
@@ -113,12 +107,12 @@ nav {
         margin-right: 24px;
         font-size: 24px;
         font-weight: $font-regular;
-    }
-    a {
-        position: relative;
-        text-decoration: none;
         color: $primary-color;
-        padding-bottom: 1.5px;
+        position: relative;
+        padding-bottom: 3px;
+    }
+    li:hover {
+        cursor: pointer;
     }
 }
 
@@ -153,15 +147,27 @@ nav {
     transform: scaleX(1);
 }
 
-// Hero 
-.hero-content {
+// Sections
+main {
+    width: 100vw;
     flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    max-width: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+
+// Home
+.home {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
     width: 100%;
     max-width: 1400px;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     padding: 50px 50px 120px 50px;
     p {
         color: $secondary-color;
@@ -171,6 +177,28 @@ nav {
     strong {
         color: $primary-color;
     }
+}
+
+// About
+.about {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+// Contact
+.contact {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
 }
 
 // Modifiers

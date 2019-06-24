@@ -1,15 +1,7 @@
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  color: #fff; }
-
-html {
-  scroll-behavior: smooth; }
-
-.hero {
-  min-height: 100vh;
-  width: 100vw;
-  max-width: 100%;
+  color: #fff;
   background: linear-gradient(225deg, #06bbff, #f206ff);
   background-size: 400% 400%;
   -webkit-animation: GradientAnimation 18s ease infinite;
@@ -17,7 +9,7 @@ html {
   animation: GradientAnimation 18s ease infinite;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly; }
+  min-height: 100vh; }
 
 @-webkit-keyframes GradientAnimation {
   0% {
@@ -42,6 +34,9 @@ html {
     background-position: 100% 0%; }
   100% {
     background-position: 0% 100%; } }
+
+html {
+  scroll-behavior: smooth; }
 
 header {
   margin: auto;
@@ -82,13 +77,13 @@ nav li {
   display: inline-block;
   margin-right: 24px;
   font-size: 24px;
-  font-weight: 400; }
-
-nav a {
-  position: relative;
-  text-decoration: none;
+  font-weight: 400;
   color: #fff;
-  padding-bottom: 1.5px; }
+  position: relative;
+  padding-bottom: 3px; }
+
+nav li:hover {
+  cursor: pointer; }
 
 .active-nav-item:before {
   content: "";
@@ -118,21 +113,49 @@ nav a {
   -webkit-transform: scaleX(1);
   transform: scaleX(1); }
 
-.hero-content {
+main {
+  width: 100vw;
   flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  max-width: 100%;
+  position: relative;
+  overflow-x: hidden; }
+
+.home {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
   width: 100%;
   max-width: 1400px;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   padding: 50px 50px 120px 50px; }
-  .hero-content p {
+  .home p {
     color: rgba(7, 2, 8, 0.7);
     font-size: 50px;
     line-height: 1.2; }
-  .hero-content strong {
+  .home strong {
     color: #fff; }
+
+.about {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 100%;
+  max-width: 1400px;
+  margin: auto; }
+
+.contact {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 100%;
+  max-width: 1400px;
+  margin: auto; }
 
 .hidden {
   display: none; }
