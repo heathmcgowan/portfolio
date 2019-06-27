@@ -45,18 +45,34 @@ $secondary-color-light: rgba(7, 2, 8, 0.5);
 }
 
 // Global
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: $font-stack;
     font-weight: $font-regular;
     color: $primary-color;
     @include gradient-animation;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
-html {
-    scroll-behavior: smooth;
+// Hero
+.hero {
+    height: 100vh;
+    min-height: 600px;
+    width: 95%;
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    p {
+        color: $secondary-color;
+        font-size: 50px;
+        line-height: 1.2;
+    }
+    strong {
+        color: $primary-color;
+    }
 }
 
 // Header
@@ -66,6 +82,7 @@ header {
     max-width: 1600px;
     padding: 30px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     flex: 0 0 auto;
@@ -147,58 +164,81 @@ nav {
     transform: scaleX(1);
 }
 
-// Sections
-main {
-    width: 100vw;
+// About
+.about {
     flex: 1 1 auto;
-    max-width: 100%;
-    position: relative;
-    overflow-x: hidden;
-}
-
-// Home
-.home {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 100%;
-    width: 100%;
-    max-width: 1400px;
-    margin: auto;
+    padding: 5% 0;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 50px 50px 120px 50px;
-    p {
-        color: $secondary-color;
-        font-size: 50px;
-        line-height: 1.2;
-    }
-    strong {
-        color: $primary-color;
+}
+
+// Projects
+
+// Media Queries
+@media only screen and (max-width: 1345px) {
+    .hero {
+        p {
+            font-size: 40px;
+        }
     }
 }
 
-// About
-.about {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 100%;
-    width: 100%;
-    max-width: 1400px;
-    margin: auto;
+@media only screen and (max-width: 1075px) {
+    .hero {
+        p {
+            font-size: 35px;
+        }
+    }
 }
 
-// Contact
-.contact {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 100%;
-    width: 100%;
-    max-width: 1400px;
-    margin: auto;
+@media only screen and (max-width: 940px) {
+    .hero {
+        p {
+            font-size: 28px;
+        }
+    }
+}
+
+@media only screen and (max-width: 755px) {
+    .header-title {
+        h1 {
+            color: $primary-color;
+            font-size: 25px;
+        }
+        h2 {
+            font-size: 20px;
+        }
+    }
+    
+    nav {
+        li {
+            font-size: 19px;
+        }
+    }
+    .hero {
+        p {
+            font-size: 22px;
+        }
+    }
+}
+
+@media only screen and (max-width: 505px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav {
+        margin-top: 15px;
+    }
+}
+
+@media only screen and (max-width: 260px) {
+    nav {
+        li {
+            margin-top: 10px;
+        }
+    }
 }
 
 // Modifiers
