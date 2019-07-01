@@ -278,7 +278,6 @@ button:active {
 
 #portfolio {
   position: relative;
-  background-color: #1a1627;
   min-height: 100vh;
   padding: 50px 20px 20px 20px;
   display: flex;
@@ -300,7 +299,7 @@ button:active {
   height: 3px;
   bottom: 0;
   left: 0;
-  background: linear-gradient(225deg, #06bbff, #f206ff);
+  background: linear-gradient(225deg, #f206ff, #06bbff);
   background-size: 400% 400%;
   -webkit-animation: GradientAnimation 18s ease infinite;
   -moz-animation: GradientAnimation 18s ease infinite;
@@ -335,19 +334,23 @@ button:active {
   max-width: 1500px;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 12px; }
 
 .portfolio-card {
   text-decoration: none;
   color: #fff;
   position: relative;
   padding: 15px 15px 10px 15px;
-  background: linear-gradient(225deg, #06bbff, #f206ff);
+  background: linear-gradient(225deg, #f206ff, #06bbff);
   background-size: 400% 400%;
   -webkit-animation: GradientAnimation 18s ease infinite;
   -moz-animation: GradientAnimation 18s ease infinite;
   animation: GradientAnimation 18s ease infinite;
   margin: 15px;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;

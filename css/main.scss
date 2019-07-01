@@ -34,6 +34,31 @@ $secondary-color-light: rgba(7, 2, 8, 0.6);
     }
 }
 
+@mixin gradient-animation-reversed {
+    background: linear-gradient(225deg, #f206ff, #06bbff);
+    background-size: 400% 400%;
+    
+    -webkit-animation: GradientAnimation 18s ease infinite;
+    -moz-animation: GradientAnimation 18s ease infinite;
+    animation: GradientAnimation 18s ease infinite;
+
+    @-webkit-keyframes GradientAnimation {
+        0%{background-position:0% 100%}
+        50%{background-position:100% 0%}
+        100%{background-position:0% 100%}
+    }
+    @-moz-keyframes GradientAnimation {
+        0%{background-position:0% 100%}
+        50%{background-position:100% 0%}
+        100%{background-position:0% 100%}
+    }
+    @keyframes GradientAnimation {
+        0%{background-position:0% 100%}
+        50%{background-position:100% 0%}
+        100%{background-position:0% 100%}
+    }
+}
+
 @mixin unselectable {
     user-select: none;
     -moz-user-select: none;
@@ -348,7 +373,7 @@ button:active {
 // portfolio
 #portfolio {
     position: relative;
-    background-color: rgb(26, 22, 39);
+    // background-color: rgba(26, 22, 39, 0.8);
     min-height: 100vh;
     padding: 50px 20px 20px 20px;
     display: flex;
@@ -372,7 +397,7 @@ button:active {
     height: 3px;
     bottom: 0;
     left: 0;
-    @include gradient-animation;
+    @include gradient-animation-reversed;
 }
 
 .portfolio-grid {
@@ -381,6 +406,9 @@ button:active {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 12px;
 }
 
 .portfolio-card {
@@ -388,8 +416,9 @@ button:active {
     color: $primary-color;
     position: relative;
     padding: 15px 15px 10px 15px;
-    @include gradient-animation;
+    @include gradient-animation-reversed;
     margin: 15px;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
     justify-content: center;
