@@ -11,7 +11,7 @@ $(document).ready(function() {
             hideContactModal();
             portfolio.scrollIntoView();
         };
-        if ($(this).hasClass('contact-btn') && $('.contact-modal').hasClass('offscreen')) {
+        if ($(this).hasClass('contact-btn') && $('.contact-modal').hasClass('hidden')) {
             showContactModal();
         };
     });
@@ -32,13 +32,15 @@ $(document).ready(function() {
     }
 
     function showContactModal() {
-        $('.contact-modal').removeClass('offscreen');
+        $('.contact-modal').removeClass('hidden');
+        $('.contact-modal').removeClass('hidden-opacity');
         $('.contact-modal').addClass('onscreen');
         $('.about-content').addClass('hidden-opacity');
     }
 
     function hideContactModal() {
-        $('.contact-modal').addClass('offscreen');
+        $('.contact-modal').addClass('hidden-opacity');
+        $('.contact-modal').addClass('hidden');
         $('.about-content').removeClass('hidden-opacity');
     }
     

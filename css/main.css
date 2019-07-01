@@ -39,7 +39,7 @@ body {
 
 #hero {
   height: 100vh;
-  min-height: 600px;
+  min-height: 800px;
   width: 92%;
   max-width: 1400px;
   margin: auto;
@@ -181,7 +181,7 @@ nav li:hover {
   right: 0;
   height: 100%;
   width: 100%;
-  transition: 0.35s ease all;
+  transition: 0.5s ease opacity;
   display: flex;
   justify-content: center;
   align-items: center; }
