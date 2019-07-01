@@ -4,16 +4,19 @@ $(document).ready(function() {
     $('.nav-btn').click(function () {
         removeActiveNav();
         addActiveNav(this);
+        hideMobileNav();
         if ($(this).hasClass('home-btn') && $('.contact-modal').hasClass('onscreen')) {
             hideContactModal();
-        };
-        if ($(this).hasClass('portfolio-btn')) {
+        } else if ($(this).hasClass('portfolio-btn')) {
             hideContactModal();
             portfolio.scrollIntoView();
-        };
-        if ($(this).hasClass('contact-btn') && $('.contact-modal').hasClass('offscreen')) {
+        } else if ($(this).hasClass('contact-btn') && $('.contact-modal').hasClass('offscreen')) {
             showContactModal();
         };
+    });
+
+    $('#hamburger').click(function() {
+        $('#mobile-nav').toggleClass('mobile-nav-hidden');
     });
 
     $('.fa-caret-up').click(function() {
@@ -40,6 +43,12 @@ $(document).ready(function() {
     function hideContactModal() {
         $('.contact-modal').addClass('offscreen');
         $('.about-content').removeClass('hidden-opacity');
+    }
+
+    function hideMobileNav () {
+        if (!$('#mobile-nav').hasClass('mobile-nav-hidden')) {
+            $('#mobile-nav').addClass('mobile-nav-hidden');
+        };
     }
     
 });

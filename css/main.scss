@@ -202,6 +202,34 @@ nav {
     transform: scaleX(1);
 }
 
+.mobile-nav-container {
+    display: none;
+    margin: 10px 0 0 10px;
+    li {
+        font-size: 24px;
+        font-weight: $font-regular;
+        color: $primary-color;
+        display: block;
+        padding-bottom: 3px;
+        margin: 10px 0 0 10px;
+        font-size: 22px;
+        position: relative;
+    }
+}
+
+#mobile-nav {
+    transition: 1s ease opacity;
+}
+
+.mobile-nav-hidden {
+    display: none;
+}
+
+#hamburger {
+    font-size: 40px;
+    padding: 5px 10px;
+}
+
 // About
 .about {
     position: relative;
@@ -483,7 +511,6 @@ button:active {
             font-size: 20px;
         }
     }
-    
     nav {
         li {
             font-size: 19px;
@@ -502,12 +529,11 @@ button:active {
         align-items: flex-start;
         padding-top: 30px;
     }
+    .mobile-nav-container {
+        display: block;
+    }
     nav {
-        margin: 15px 0 0 20px;
-        li {
-            display: block;
-            margin-top: 10px;
-        }
+        display: none;
     }
     form {
         padding: 10px 20px;
