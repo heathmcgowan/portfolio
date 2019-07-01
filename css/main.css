@@ -278,6 +278,7 @@ button:active {
 
 #portfolio {
   position: relative;
+  background-color: rgba(26, 22, 39, 0.8);
   min-height: 100vh;
   padding: 50px 20px 20px 20px;
   display: flex;
@@ -334,10 +335,7 @@ button:active {
   max-width: 1500px;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
-  background-color: rgba(255, 255, 255, 0.15);
-  padding: 20px;
-  border-radius: 12px; }
+  justify-content: center; }
 
 .portfolio-card {
   text-decoration: none;
