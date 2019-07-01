@@ -25,6 +25,12 @@ $(document).ready(function() {
         hideContactModal();
     });
 
+    $(document).on('click', function (e) {
+        if ($(e.target).closest(".mobile-nav-container").length === 0) {
+            hideMobileNav();
+        }
+    });
+
     function removeActiveNav() {
         $('.nav-btn').removeClass('active-nav-item');
     }
