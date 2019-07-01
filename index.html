@@ -8,71 +8,100 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <section class="hero">
+    <section id="hero">
         <header>
-            <a class="header-title" href="/">
-                <h1>Heath McGowan</h1>
-                <h2>Web Developer</h2>
+            <a class="header-title pointer" href="/">
+                <img class="header-logo" src="img/logo.png" alt="header logo" />
+                <div class="header-title-text">
+                    <h1>Heath McGowan</h1>
+                    <h2>Web Developer</h2>
+                </div>
+                
             </a>
             <nav>
                 <ul>
-                    <li><a class="active-nav-item" href="/">Home</a></li>
-                    <li><a class="non-active-nav-item" href="#projects">Projects</a></li>
-                    <li><a class="non-active-nav-item" href="/">Contact</a></li>
+                    <li class="nav-btn home-btn active-nav-item">Home</li>
+                    <li class="nav-btn portfolio-btn non-active-nav-item">Portfolio</li>
+                    <li class="nav-btn contact-btn non-active-nav-item">Contact</li>
                 </ul>
             </nav>
         </header>
         <section class="about">
-            <p>I'm <strong>Heath McGowan</strong>.</p>
-            <p>I live in <strong>Auckland, New Zealand</strong>.</p>
-            <p>I have a passion for <strong>Web Design</strong> and <strong>Development</strong>.</p>
-            <p>I run on <strong>Coffee</strong> and <strong>Music</strong>.</p>
+            <p class="about-content">I'm <strong>Heath McGowan</strong>.</p>
+            <p class="about-content">I live in <strong>Auckland, New Zealand</strong>.</p>
+            <p class="about-content">I have a passion for <strong>Web Design</strong> and <strong>Development</strong>.</p>
+            <p class="about-content">I run on <strong>Coffee</strong> and <strong>Music</strong>.</p>
+            <a class="about-content" href="#portfolio"><i class="fas fa-caret-down pointer"></i></a>
+            <div class="contact-modal offscreen">
+                <div class="contact-container">
+                    <div class="social-links">
+                        <a href="https://github.com/heathmcgowan" target="_blank"><img class="github-logo" src="img/github.png" alt="github link" /></a>
+                        <a href="https://www.linkedin.com/in/heathmcgowan" target="_blank"><img class="linkedin-logo" src="img/linkedin.png" alt="linkedin link" /></a>
+                    </div>
+                    <form action="https://formspree.io/heathjmcgowan@gmail.com" method="POST">
+                        <h2>Get In Touch</h2>
+                        <fieldset>
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                            <label for="emailaddress">Email Address *</label>
+                            <input type="email" id="emailaddress" name="emailaddress" required>
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </fieldset>
+                        <button class="pointer" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
         </section>
     </section>
-    <section id="projects">
-        <h2 class="projects-header">PROJECTS</h2>
-        <div class="projects-grid">
-            <div class="projects-card pointer">
-                <img src="https://www.urbansplash.co.uk/images/placeholder-16-9.jpg">
-                <h3>Project Name</h3>
-            </div>
-            <div class="projects-card pointer">
-                <img src="https://www.urbansplash.co.uk/images/placeholder-16-9.jpg">
-                <h3>Project Name</h3>
-            </div>
-            <div class="projects-card pointer">
-                <img src="https://www.urbansplash.co.uk/images/placeholder-16-9.jpg">
-                <h3>Project Name</h3>
-            </div>
-            <div class="projects-card pointer">
-                <img src="https://www.urbansplash.co.uk/images/placeholder-16-9.jpg">
-                <h3>Project Name</h3>
-            </div>
-            <div class="projects-card pointer">
-                <img src="https://www.urbansplash.co.uk/images/placeholder-16-9.jpg">
-                <h3>Project Name</h3>
-            </div>
-            <div class="projects-card pointer">
-                <img src="https://www.urbansplash.co.uk/images/placeholder-16-9.jpg">
-                <h3>Project Name</h3>
-            </div>
-            <div class="projects-card pointer">
-                <img src="https://www.urbansplash.co.uk/images/placeholder-16-9.jpg">
-                <h3>Project Name</h3>
-            </div>
-            <div class="projects-card pointer">
-                <img src="https://www.urbansplash.co.uk/images/placeholder-16-9.jpg">
-                <h3>Project Name</h3>
-            </div>
+    <section id="portfolio">
+        <a href="#hero"><i class="fas fa-caret-up"></i></a>
+        <h2 class="portfolio-header">Portfolio</h2>
+        <div class="portfolio-grid">
+            <a class="portfolio-card pointer" href="https://heathmcgowan.github.io/roam/" target="_blank">
+                <img src="img/roam.jpg" alt="roam screenshot">
+                <h3>Roam - Team Page</h3>
+            </a>
+            <a class="portfolio-card pointer" href="http://heath.mcgowan.yoobee.net.nz/explore/" target="_blank">
+                <img src="img/explore.jpg" alt="explore screenshot">
+                <h3>Explore</h3>
+            </a>
+            <a class="portfolio-card pointer" href="https://www.wingsinmotion.co.nz" target="_blank">
+                <img src="img/wingsinmotion.jpg" alt="wings in motion screenshot">
+                <h3>Wings in Motion</h3>
+            </a>
+            <a class="portfolio-card pointer" href="http://heath.mcgowan.yoobee.net.nz/whatmovie/" target="_blank">
+                <img src="img/whatmovie.jpg" alt="what movie screenshot">
+                <h3>Movie Randomiser</h3>
+            </a>
+            <a class="portfolio-card pointer" href="http://heath.mcgowan.yoobee.net.nz/tempo/" target="_blank">
+                <img src="img/tempo.jpg" alt="tempo screenshot">
+                <h3>Tempo</h3>
+            </a>
+            <a class="portfolio-card pointer" href="http://heath.mcgowan.yoobee.net.nz/macs/" target="_blank">
+                <img src="img/macs.jpg" alt="macs beer screenshot">
+                <h3>Macs - Product Page</h3>
+            </a>
+            <a class="portfolio-card pointer" href="http://heath.mcgowan.yoobee.net.nz/portfolio/" target="_blank">
+                <img src="img/designportfolio.jpg" alt="design portfolio screenshot">
+                <h3>Design Portfolio</h3>
+            </a>
+            <a class="portfolio-card pointer" href="https://github.com/heathmcgowan/" target="_blank">
+                <img src="img/githubrepo.jpg" alt="github repo screenshot">
+                <h3>GitHub Repo</h3>
+            </a>
+            <a class="portfolio-card pointer extra-card" href="http://heath.mcgowan.yoobee.net.nz/yearinfilm/" target="_blank">
+                <img src="img/yearinfilm.jpg" alt="year in film screenshot">
+                <h3>Chart.js visualisation</h3>
+            </a>
         </div>
-    </section>  
-    </main>
+    </section>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/cadfab86fb.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
